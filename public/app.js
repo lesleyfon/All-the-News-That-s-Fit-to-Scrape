@@ -12,7 +12,7 @@ $(document).ready(function () {
             )}
         })
     })
-    $("#home").on("click", function(){
-        $.get("/",)
-    })
+    // $("#home").on("click", function(){
+    //     $.get("/",)
+    // })
 })

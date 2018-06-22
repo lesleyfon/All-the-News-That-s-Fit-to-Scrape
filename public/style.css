@@ -4,14 +4,12 @@ body{
     padding: 0;
     margin: 0;
 }
-    /* background-color: red; */
 
 button {
     width: 100px;
     height:50px;
     border-radius: .5;
-    /* background-color: blue; */
-    /* color: white; */
+   
     color: #17a2b8
 }
 #articles{
@@ -20,7 +18,7 @@ button {
     justify-content: space-around;
 }
 .navbar{
-    margin-bottom: 600px
+    margin-bottom: 10%;
 }
 
 
@@ -29,7 +27,7 @@ button {
     background-color: aliceblue;
     opacity: 0.6;
     border: 3px outset lightslategray;
-    margin: 5px;
+    margin: 5px 0 5px 0;
     height: 6em;
     padding-top: 2em;
     border-top: 3px solid #ccc;
