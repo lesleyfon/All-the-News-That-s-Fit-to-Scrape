@@ -10,6 +10,15 @@ var mongoose = require("mongoose");
 var axios = require("axios");
 var cheerio = require("cheerio");
 
+
+// Connect to the Mongo DB
+// mongoose.connect("mongodb://localhost/NYTscraper");
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/NYTscraper"
+
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI)
+// routes
+
 // Require all models
 var db = require("./models");
 
@@ -25,11 +34,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Use express.static to serve the public folder as a static directorys
 app.use(express.static("public"));
 
-// Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/NYTscraper");
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines"
 
-// routes
 // a get route for scraping the nyt website
 
 app.get("/scrape", function (req, res) {

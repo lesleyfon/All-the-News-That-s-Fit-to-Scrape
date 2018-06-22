@@ -21,7 +21,9 @@ button {
     margin-bottom: 10%;
 }
 
-
+jumbotron{
+    text-align: center;
+}
 #artDiv {
     width: 100%;
     background-color: aliceblue;
