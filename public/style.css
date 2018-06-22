@@ -1,28 +1,46 @@
 body{
-    background: url("public/images/back-image.jpg");
-    /* background-color: red; */
+    background-image: url("images/back-image.jpg");
+    background-size: cover;
+    padding: 0;
+    margin: 0;
 }
+    /* background-color: red; */
+
 button {
-    width: 200px;
-    height:100px;
+    width: 100px;
+    height:50px;
     border-radius: .5;
-    background-color: blue;
-    color: white;
+    /* background-color: blue; */
+    /* color: white; */
+    color: #17a2b8
 }
 #articles{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.navbar{
+    margin-bottom: 600px
+}
 
 
 #artDiv {
     width: 100%;
+    background-color: aliceblue;
+    opacity: 0.6;
     border: 3px outset lightslategray;
     margin: 5px;
+    height: 6em;
+    padding-top: 2em;
+    border-top: 3px solid #ccc;
+    border-bottom: 3px solid #ccc;
+    /* margin-top: 5.0em; */
 }
 
 h1{
-    color: grey 
+    color: grey;
+    padding-bottom: 5px;
+
 
 }
+
