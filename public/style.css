@@ -1,0 +1,28 @@
+body{
+    background: url("public/images/back-image.jpg");
+    /* background-color: red; */
+}
+button {
+    width: 200px;
+    height:100px;
+    border-radius: .5;
+    background-color: blue;
+    color: white;
+}
+#articles{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+#artDiv {
+    width: 100%;
+    border: 3px outset lightslategray;
+    margin: 5px;
+}
+
+h1{
+    color: grey 
+
+}

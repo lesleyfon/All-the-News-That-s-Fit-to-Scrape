@@ -1,10 +1,10 @@
 {
   "name": "All-the-News-That-s-Fit-to-Scrape",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/lesleyfon/All-the-News-That-s-Fit-to-Scrape/issues"
   },
-  "homepage": "https://github.com/lesleyfon/All-the-News-That-s-Fit-to-Scrape#readme"
+  "homepage": "https://github.com/lesleyfon/All-the-News-That-s-Fit-to-Scrape#readme",
+  "description": "",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "mongojs": "^2.6.0",
+    "mongoose": "^5.1.6",
+    "morgan": "^1.9.0",
+    "request": "^2.87.0"
+  }
 }
