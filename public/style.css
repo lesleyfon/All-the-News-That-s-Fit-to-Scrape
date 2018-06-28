@@ -26,21 +26,7 @@ jumbotron{
 }
 #artDiv {
     width: 100%;
-    background-color: aliceblue;
-    opacity: 0.6;
-    border: 3px outset lightslategray;
-    margin: 5px 0 5px 0;
-    height: 6em;
-    padding-top: 2em;
-    border-top: 3px solid #ccc;
-    border-bottom: 3px solid #ccc;
-    /* margin-top: 5.0em; */
+    margin: 5px ; 
 }
 
-h1{
-    color: grey;
-    padding-bottom: 5px;
-
-
-}
 

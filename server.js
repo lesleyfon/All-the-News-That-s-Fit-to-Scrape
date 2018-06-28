@@ -48,25 +48,27 @@ app.get("/scrape", function (req, res) {
         var $ = cheerio.load(response.data);
         // console.log(response.data)
         // Now, we grab every h2 within an article tag, and do the following:
-        $("article").each(function (i, element) {
+        $("article.story").each(function (i, element) {
             var result = {}; 
 
-            if($(this).children("h2").children("a").text() !== undefined && $(this).children("a").attr("href") !== undefined){
+            // if($(this).children("h2").children("a").text() !== undefined && $(this).children("a").attr("href") !== undefined){
             // Add the text and href of every link, and save them as properties of the result object
            
-            result.title = $(this).children("a").text().trim();
-            result.link = $(this).children("a").attr("href");
-            // result.summary = $(this).children(".summary").text().trim();
+            result.title = $(this).children("h2.story-heading").children("a").text().trim();
+            result.link = $(this).children("h2.story-heading").children("a").attr("href");
+            
+           var summ = $(this).children("p.summary").text().trim();
+           if (summ) {
+            result.summary = summ
+           } else {
+               result.summary = "Sucks for you, there's no summary."
+           };
 
-            // console.log("this is the link: " + result.link);
-            // console.log("=======================")
-            // console.log("this is the title: " + result.title);
-            // console.log("=======================")
-            // console.log("this is the Summary: " + result.summary);
-            // console.log("=======================")
+            
+            // console.log("Result.summary: " + result.summary)
 
-            } 
-            // Create a new Article using the `result` object built from scraping
+            // } 
+            // Create a new Article using the `result` object built from scraping////
             db.Article.create(result)
                 .then(function (dbArticle) {
                 //view added result in the console
@@ -84,9 +86,10 @@ app.get("/scrape", function (req, res) {
                     console.log(err)
                     // return res.json("yoo error" + err)
                 });
+            // console.log(result)
         });
         // res.send("scrape complete")
-
+        
     });
     
     app.get("/articles", function (req, res) {
