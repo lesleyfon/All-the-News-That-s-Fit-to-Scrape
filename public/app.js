@@ -9,6 +9,9 @@ $(document).ready(function () {
                         <a id="artLink" href="${data[i].link}" target="_blank">
                              <h1 id="artTitle">${data[i].title}</h1>
                         </a> 
+                        <a class="btn btn-success save">
+                            Save Article
+                        </a>
                     </div>
                     <div class="card-body">
                          <p>${data[i].summary}</p>  

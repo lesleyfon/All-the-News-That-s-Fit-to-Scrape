@@ -12,17 +12,25 @@ button {
    
     color: #17a2b8
 }
-#articles{
+#artTitle{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    color: black
 }
-.navbar{
+#artLink{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: black
+}
+/* .navbar{
     margin-bottom: 10%;
-}
+} */
 
-jumbotron{
+.jumbotron-fluid{
     text-align: center;
+    height: 500px;
 }
 #artDiv {
     width: 100%;
